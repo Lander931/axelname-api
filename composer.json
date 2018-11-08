@@ -1,0 +1,25 @@
+{
+  "name": "lander931/alexname-api",
+  "description": "axelname.ru API Client",
+  "keywords": ["axelname", "axelnameru", "axelname.ru", "axelname api"],
+  "homepage": "https://github.com/Lander931/axelname-api",
+  "authors": [
+    {
+      "name": "Dmitry Chekanov",
+      "email": "lander931@mail.ru",
+      "homepage": "https://github.com/Lander931",
+      "role": "Developer"
+    }
+  ],
+  "type": "library",
+  "license": "MIT",
+  "require": {
+    "php": ">=5.6",
+    "guzzlehttp/guzzle": "6.3.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Lander931\\Axelname\\": "src/"
+    }
+  }
+}
