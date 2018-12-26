@@ -77,6 +77,11 @@ class AxelnameClient
         return $this->request('domain_check', $params);
     }
 
+    public function domainList()
+    {
+        return $this->request('domains_list');
+    }
+
     /**
      * @param array $params
      * @see https://axelname.ru/static/content/files/axelname_api_rest_lite.pdf#[{%22num%22%3A51%2C%22gen%22%3A0}%2C{%22name%22%3A%22XYZ%22}%2C56.7%2C785.9%2C0]
