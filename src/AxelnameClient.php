@@ -64,6 +64,21 @@ class AxelnameClient
         return $this->request('domain_reg', $params);
     }
 
+    public function domainUpdate($domain, $ns = [])
+    {
+        $ns = array_values($ns);
+
+        $params = [
+            'domain' => $domain,
+        ];
+
+        for ($i = 1; $i <= count($ns); $i++) {
+            $params['ns' . $i] = $ns[$i - 1];
+        }
+
+        return $this->request('domain_update', $params);
+    }
+
     /**
      * @param string $domain
      * @return \stdClass
