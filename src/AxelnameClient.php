@@ -12,6 +12,7 @@ namespace Lander931\Axelname;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
+use GuzzleHttp\RequestOptions;
 use Lander931\Axelname\Auth\AuthInterface;
 
 /**
@@ -166,6 +167,6 @@ class AxelnameClient
         $params = array_merge($this->auth->toArray(), $params);
         $url = self::API_URL . $method . '/?' . http_build_query($params);
 
-        return json_decode(($this->http_client->request('GET', $url))->getBody()->getContents());
+        return json_decode(($this->http_client->request('GET', $url, [RequestOptions::VERIFY => false]))->getBody()->getContents());
     }
 }
